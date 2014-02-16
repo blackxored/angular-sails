@@ -15,7 +15,7 @@
 
     ngSailsModule.service('$sails', ['$rootScope', function ($rootScope) {
 
-        var socket = io.connect(),
+        var socket = io.connect('http://localhost:1337'), // TODO: find way to inject config
             connected = false,
             reconnectAttempt = null;
 
